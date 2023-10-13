@@ -35,6 +35,16 @@ print(example_string,s)
 #split() method returns list of string by given character
 print(example_string.split(" "))
 
+
+# todo write on format strings
+format_example = "when print directly nothing happens but using format the variable will appear {}"
+print(format_example.format("see the variable is appearing"))
+#original string remains unchanged
+print(format_example)
+#formatting can be indexed 
+format_example_2 = "my name is {1}, my surname is {2}, i work at {0}"
+print(format_example_2.format("an it company","samarth","dariya"))
+
 #all strings method returns a new string and do not change the original string
 
 
@@ -84,4 +94,4 @@ print(example_string.split(" "))
     # upper()	Converts a string into upper case
     # zfill()	Fills the string with a specified number of 0 values at the beginning
 
-#reference W3schhol python tutorial 
+#reference W3schhol python tutorial and python official documentation
