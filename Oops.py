@@ -1,3 +1,6 @@
+from turtle import circle
+
+
 class Computers:
         company = "Dell"
 
@@ -28,7 +31,7 @@ class Father:
         def __init__(self):
                 print("father initialized")
 
-                
+
         def calling(self):
                 print("father's calling")
 
@@ -80,3 +83,42 @@ obj.m()
 # har object ka ek MRO ban jaega aur jab apan super keyword lagaenge toh uske agle vale
 # ko bulaya jaega not necessary jiske under super laga hai uska parent
 # jis bhi object k liye bula rahe hai uska MRO dekhenge aur us hisab se resolve karenge
+
+print("\nproperty vala section\n")
+
+class Circle:
+    def __init__(self, radius):
+        self._radius = radius
+        self._dia = 2*radius
+
+    @property
+    def dia(self):
+        print("getting dia")
+        return self._dia
+
+    def _get_radius(self):
+        print("Get radius")
+        return self._radius
+
+    def _set_radius(self, value):
+        print("Set radius")
+        self._radius = value
+
+    @dia.setter
+    def dia(self,value):
+        self._dia = value
+
+    def _del_radius(self):
+        print("Delete radius")
+        del self._radius
+
+    radius = property(
+        fget=_get_radius,
+        fset=_set_radius,
+        fdel=_del_radius,
+        doc="The radius property."
+    )
+
+circle = Circle(9)
+circle._radius = 34 # this is still working 
+print(circle.radius)
