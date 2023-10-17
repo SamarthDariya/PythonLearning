@@ -24,14 +24,26 @@ print(Computers.company,Samarth_PC.company)
 Samarth_PC.run()
 
 class Father:
+
+        def __init__(self):
+                print("father initialized")
+
+                
         def calling(self):
                 print("father's calling")
 
 class Mother:
+
+        def __init__(self):
+                print("Mother initialized")
+
         def calling(self):
                 print("inside Mother's calling")
 
 class Son(Father,Mother):
+        def __init__(self):
+                print("son initialized")
+                super().__init__()
         def calling(self):
             print("samarth's calling")
             super().calling()
