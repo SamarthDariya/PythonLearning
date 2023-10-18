@@ -90,6 +90,7 @@ class Circle:
     def __init__(self, radius):
         self._radius = radius
         self._dia = 2*radius
+        self.__dia = self._dia
 
     @property
     def dia(self):
