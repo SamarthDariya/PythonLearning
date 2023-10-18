@@ -14,7 +14,7 @@ class Computers:
         
         def __del__(self):
             print("dismantelling the PC")
-
+        
 
 Samarth_PC = Computers("inspiron","i5","8")
 Computers.company = "Asus"
